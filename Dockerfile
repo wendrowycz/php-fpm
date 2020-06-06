@@ -7,5 +7,8 @@ RUN apk --no-cache update \
 RUN docker-php-ext-install zip
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl
+RUN docker-php-ext-install opcache
+
+COPY conf.d/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
 
 CMD ["php-fpm"]
