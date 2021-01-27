@@ -1,6 +1,7 @@
 FROM php:8.0-fpm-alpine
 
 RUN apk add --no-cache libzip-dev \
+      git \ 
       freetype \
       libjpeg \
       libpng \
